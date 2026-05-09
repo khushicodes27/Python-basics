@@ -1,0 +1,36 @@
+import math
+
+# Initialize an empty list
+list_num = []
+
+# Get the number of elements
+N = int(input("Enter the value of N: "))
+print("Enter {} numbers:".format(N))
+
+# Loop to get N numbers from the user
+for i in range(0, N):
+    num = int(input())
+    list_num.append(num)
+
+print("Entered list of numbers is:", list_num)
+
+# Calculate Sum
+total_sum = sum(list_num)
+print("Sum of numbers in list is:", total_sum)
+
+# Calculate Mean
+mean = total_sum / len(list_num)
+print("Mean of numbers in list is:", mean)
+
+# Calculate Variance
+sum_var = 0
+for num in list_num:
+    sum_var = sum_var + (num - mean) ** 2
+
+variance = sum_var / N
+print("The Variance of numbers in list is:", variance)
+
+# Calculate Standard Deviation
+std_dev = math.sqrt(variance)
+print("The Standard Deviation of numbers in list is:", std_dev)
+
